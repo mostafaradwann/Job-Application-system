@@ -14,5 +14,3 @@ class Job(WebsiteGenerator):
 			days_since_creation = (current_date - date_obj).days
 
 			frappe.db.set_value(self.doctype, self.name, 'days_since_creation', days_since_creation)
-
-
