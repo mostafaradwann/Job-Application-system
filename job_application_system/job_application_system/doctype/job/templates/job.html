@@ -1,0 +1,48 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="container">
+    <!-- Content here -->
+    <h2>{{ job_title }}</h2>
+    <div class="row">
+        <div class="col-2">
+            <div class="border border-info rounded-pill bg-info text-center">
+                <p class="p-1 text-light m-0">
+                    {{ job_location }}
+                </p>
+            </div>
+        </div>
+        {% if experience_level: %}
+        <div class="col-2">
+            <div class="border border-info rounded-pill bg-secondary text-center">
+                <p class="p-1 text-light m-0">
+                    {{ experience_level }}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+        {% if contract_type: %}
+        <div class="col-2">
+            <div class="border border-info rounded-pill bg-info text-center">
+                <p class="p-1 text-light m-0">
+                    {{ contract_type }}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <p>{{ job_description }}</p>
+
+    
+    <a href="/job-application-form/new?job_id={{ name }}">
+        <button type="button" class="btn btn-lg btn-outline-info border border-info apply-button">
+            Apply
+        </button>
+    </a>
+</div>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

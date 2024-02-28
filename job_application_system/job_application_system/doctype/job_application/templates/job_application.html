@@ -1,0 +1,58 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+
+<div class="container">
+    <!-- Content here -->
+    <h2>{{ full_name }}</h2>
+    <div class="row">
+        <div class="col-4">
+            <div class="border border-info rounded-pill bg-info text-center">
+                <p class="p-1 text-light m-0">
+                    {{ email }}
+                </p>
+            </div>
+        </div>
+        {% if phone: %}
+        <div class="col-2">
+            <div class="border border-info rounded-pill bg-secondary text-center">
+                <p class="p-1 text-light m-0">
+                    {{ phone }}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <hr>
+    <h3 class="font-weight-bolder">Work Experience</h3>
+    <p>{{ work_experience }}</p>
+
+    {% if skills %}
+    <hr>
+    <h3 class="font-weight-bolder">Skills</h3>
+    <p>{{ skills }}</p>
+    {% endif %}
+
+    {% if cover_letter %}
+        <hr>
+        <h3 class="font-weight-bolder">Cover Letter</h3>
+        <p>{{ cover_letter }}</p>
+    {% else %}
+    <p class="text-danger">No Cover Letter Added</p>
+    {% endif %}
+    
+    {% if resume: %}
+    <a href="{{ resume }}">
+        <button type="button" class="btn btn-lg btn-outline-info border border-info apply-button">
+            Download Resume
+        </button>
+    </a>
+    {% endif %}
+    
+</div>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

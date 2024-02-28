@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-02-25 16:48:20.912915",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_umej",
+  "job_title",
+  "experience_level",
+  "column_break_vwdr",
+  "job_location",
+  "contract_type",
+  "section_break_dcgs",
+  "column_break_a25b",
+  "job_description",
+  "amended_from",
+  "published",
+  "route",
+  "days_since_creation"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_umej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Job Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "experience_level",
+   "fieldtype": "Select",
+   "label": "Experience Level",
+   "options": "Internship\nJunior Level\nMid Level\nSenior Level"
+  },
+  {
+   "fieldname": "job_location",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Job Location",
+   "options": "Remote\nOn-site",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Project-Based\nFull-time\nPart-time"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_vwdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_a25b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dcgs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "days_since_creation",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Days Since Creation",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-27 17:08:29.152853",
+ "modified_by": "Administrator",
+ "module": "Job Application System",
+ "name": "Job",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Job Provider",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "route": "jobs",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
