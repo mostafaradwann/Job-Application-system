@@ -29,7 +29,7 @@
  "list_title": "Your Job Applications",
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-02-26 16:39:40.296668",
+ "modified": "2024-03-11 17:09:19.287458",
  "modified_by": "Administrator",
  "module": "Job Application System",
  "name": "job-application",
@@ -41,7 +41,7 @@
  "show_sidebar": 0,
  "success_message": "You Will Receive an Email soon if you where selected\ud83d\ude04",
  "success_title": "Thank You",
- "success_url": "/jobs",
+ "success_url": "/alljobs",
  "title": "Job Application",
  "web_form_fields": [
   {

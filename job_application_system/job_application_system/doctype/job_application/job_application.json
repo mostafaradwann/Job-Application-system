@@ -21,6 +21,7 @@
   "skills",
   "column_break_usdb",
   "cover_letter",
+  "status",
   "job",
   "published",
   "route"
@@ -132,13 +133,20 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "default": "Submitted",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Submitted\nReviewed\nSelected\nInterviewed\nAccepted\nRejected"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2024-02-28 15:30:37.396896",
+ "modified": "2024-03-11 19:10:27.572150",
  "modified_by": "Administrator",
  "module": "Job Application System",
  "name": "Job Application",

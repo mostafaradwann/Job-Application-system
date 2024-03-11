@@ -1,0 +1,54 @@
+{% if not applications %}
+<p class="text-danger">No Applications yet</p>
+{% else %}
+<table class="table table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for application in applications %}
+
+        <tr>
+            <th scope="row">
+                <a class="review-link" name="{{ application.name }}" href="{{ application.route }}">
+                    {{ application.full_name }}
+                </a>
+            </th>
+            <td>{{ application.phone }}</td>
+            <td>{{ application.email }}</td>
+            <td>
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle status-button" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        {{ application.status }}
+                    </a>
+                    
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item update-status" name="Reviewed" href="">Reviewed</a>
+                        <a class="dropdown-item update-status" name="Selected" href="">Selected</a>
+                        <a class="dropdown-item update-status" name="Interviewed" href="">Interviewed</a>
+                        <a class="dropdown-item update-status" name="Accepted" href="">Accepted</a>
+                        <a class="dropdown-item update-status" name="Rejected" href="">Rejected</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif%}
+<script>
+    
+    // frappe.ready(function(){
+    //     const review = document.getElementById("review")
+    //     review.addEventListener("click", function(event){
+    //         frappe.msgprint("testing")
+    //     })
+    // })
+    
+</script>

@@ -105,7 +105,7 @@
  "is_published_field": "published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-27 17:08:29.152853",
+ "modified": "2024-03-11 21:46:34.954284",
  "modified_by": "Administrator",
  "module": "Job Application System",
  "name": "Job",
@@ -122,7 +122,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -136,7 +135,6 @@
    "role": "Job Provider",
    "select": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],

@@ -1,0 +1,39 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+
+
+<h3>{{ job.job_title }} Job Applications</h3>
+<div id="jobid" name="{{ jobid }}" hidden></div>
+<div class="container">
+    
+
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active app-status" id="all-apps" href="">All Applicants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link app-status" id="reviewed-st" href="">Reviewed</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link app-status" id="selected-st" href="">Selected</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link app-status" id="interviewed-st" href="">Interviewed</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link app-status" id="accepted-st" href="">Accepted</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link app-status" id="rejected-st" href="">Rejected</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body" id="pageContent">
+        
+    </div>
+</div>
+</div>
+<script src="/job_applications.js"></script>
+{% endblock %}

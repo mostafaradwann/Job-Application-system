@@ -1,0 +1,53 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col mb-3">
+        <a href="/job-form/new">
+            <button type="button" class="btn btn-lg btn-outline-success border border-success apply-button">
+                + Add New Job
+            </button>
+        </a>
+    </div>
+    <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Job Title</th>
+                <th scope="col">Job Location</th>
+                <th scope="col">Contarct Type</th>
+                <th scope="col">Experience Level</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in alljobs %}
+
+            <tr>
+                <th scope="row">
+                    <a href="/{{ job.route }}">
+                        {{ job.job_title }}
+                    </a>
+                </th>
+                <td>{{ job.job_location }}</td>
+                <td>{{ job.contract_type }}</td>
+                <td class="">{{ job.experience_level }}</td>
+                <td class=""><a class="btn btn-sm btn-success"
+                        href="/job_applications?jobid={{ job.name }}">Applicants</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Content here -->
+
+
+
+
+<script src="/job_applications.js"></script>
+{% endblock %}
